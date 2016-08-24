@@ -1,24 +1,7 @@
 # Sequence
 
-**TODO: Add description**
+This is the example OTP application from *Programming Elixir*, chapter 18.
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `sequence` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:sequence, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `sequence` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:sequence]]
-    end
-    ```
+This uses a supervisor, a subsupervisor and two genservers. One genserver acts
+as a stash for the state of the sequence genserver.
 
