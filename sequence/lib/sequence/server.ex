@@ -13,6 +13,12 @@ defmodule Sequence.Server do
     GenServer.cast __MODULE__, {:increment_number, delta}
   end
 
+  def save_value do
+    GenServer.cast __MODULE__, :save_value
+  end
+
+  # Private API
+
   def init(stash_pid) do
     current_number = Sequence.Stash.get_value stash_pid
     {:ok, {current_number, stash_pid}}
@@ -24,6 +30,11 @@ defmodule Sequence.Server do
 
   def handle_cast({:increment_number, delta}, {current_number, stash_pid}) do
     {:noreply, {current_number + delta, stash_pid}}
+  end
+
+  def handle_cast(:save_value, {current_number, stash_pid}) do
+    Sequence.Stash.save_value stash_pid, current_number
+    {:noreply, {current_number, stash_pid}}
   end
 
   def terminate(_reason, {current_number, stash_pid}) do
