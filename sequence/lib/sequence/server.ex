@@ -17,6 +17,10 @@ defmodule Sequence.Server do
     GenServer.cast __MODULE__, :save_value
   end
 
+  def blow_up do
+    GenServer.cast __MODULE__, :blow_up
+  end
+
   # Private API
 
   def init(stash_pid) do
@@ -35,6 +39,10 @@ defmodule Sequence.Server do
   def handle_cast(:save_value, {current_number, stash_pid}) do
     Sequence.Stash.save_value stash_pid, current_number
     {:noreply, {current_number, stash_pid}}
+  end
+
+  def handle_cast(:blow_up, _) do
+    exit(:boom)
   end
 
   def terminate(_reason, {current_number, stash_pid}) do
