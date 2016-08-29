@@ -1,0 +1,10 @@
+[{release,"sequence","0.3.0","8.0",
+          [{elixir,"1.3.2","./lib/elixir-1.3.2"},
+           {stdlib,"3.0","./lib/stdlib-3.0"},
+           {kernel,"5.0","./lib/kernel-5.0"},
+           {logger,"1.3.2","./lib/logger-1.3.2"},
+           {sequence,"0.3.0","./lib/sequence-0.3.0"},
+           {compiler,"7.0","./lib/compiler-7.0"},
+           {iex,"1.3.2","./lib/iex-1.3.2"},
+           {sasl,"3.0","./lib/sasl-3.0"}],
+          permanent}].
