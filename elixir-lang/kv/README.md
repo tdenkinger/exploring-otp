@@ -1,24 +1,8 @@
-# KV
+# Interesting Links
 
-**TODO: Add description**
+[Erlang: The Movie](https://www.youtube.com/watch?v=xrIjfIjssLE)
 
-## Installation
+[Selling Food With Elixir](https://www.youtube.com/watch?v=fkDhU-2NWJ8)
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add `kv` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:kv, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `kv` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:kv]]
-    end
-    ```
+[Elixir Guides](http://elixir-lang.org/getting-started/introduction.html)
 
